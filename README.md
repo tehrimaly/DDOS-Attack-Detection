@@ -1,25 +1,44 @@
-Machine Learning-Based DDoS Attack Detection System
+#  AI-Powered DDoS Detection Dashboard
 
-This project is a real-time Distributed Denial of Service (DDoS) attack detection system developed as part of an Information Security study. The system leverages machine learning algorithms to automate the identification of malicious network traffic, preventing system down-time and protecting infrastructure from malicious flooding attempts.
+A machine learning-based network intrusion detection system with an interactive Streamlit dashboard. This project analyzes network flows to classify traffic as benign or malicious across 8 different DDoS attack types.
 
-Core Features and Methodology:
+<img width="1450" height="682" alt="WhatsApp Image 2026-04-27 at 8 24 16 PM" src="https://github.com/user-attachments/assets/0076a468-617a-4df7-b730-d7535f29ef47" />
 
-Real-Time Traffic Analysis: Evaluates network traffic data streams to differentiate between legitimate user requests and malicious high-volume flooding patterns.
 
-Dataset Utilization: Trained, validated, and tested using the comprehensive CIC-DDoS dataset to ensure realistic network traffic simulation and high detection accuracy.
 
-Comparative Model Evaluation: Experimented with multiple machine learning algorithms, with XGBoost and Random Forest yielding the peak performance metrics for classification accuracy.
+##  Model Performance & Metrics
+The core detection engine is powered by an **XGBoost Classifier** that was trained on over 125,000 network flows.
 
-Interactive Interface: Implemented a user-friendly deployment interface using Streamlit, allowing for real-time traffic monitoring, data visualization, and immediate classification feedback.
+* **Overall Accuracy:** 99.57%
+* **Benign Detection Rate:** 99.91%
+* **Attack Detection Rate:** 66.60% (Specific to Syn attacks)
+* **Training Time:** ~110 seconds
 
-Technical Stack:
+##  Technical Details
+* **Algorithm:** XGBoost Classifier
+* **Hyperparameters:** 300 Trees, Max Depth: 15, Learning Rate: 0.05
+* **Features:** 77 Network Flow Features
+* **Training Samples:** 125,170 flows
+* **Testing Samples:** 306,201 flows
 
-Programming Language: Python
+##  Classification Categories (9 Classes)
+The model successfully classifies network traffic into the following 9 categories:
+1. Benign (Normal Traffic)
+2. LDAP
+3. MSSQL
+4. NetBIOS
+5. Portmap
+6. Syn
+7. UDP
+8. UDPLag
+9. Unknown
 
-Machine Learning Frameworks: Scikit-learn, XGBoost, Random Forest
+##  Note on Datasets
+*Due to GitHub's file size limits, the massive `.parquet` and `.csv` datasets used to train this model are not included in this repository. The repository contains the source code for the machine learning model, data processing, and the Streamlit interface.*
+## Dataset
+ CIC-DDoS2019
+##  How to Run Locally
 
-Data Analysis: Pandas, NumPy
-
-Deployment & UI: Streamlit
-
-Data Source: CIC-DDoS Dataset
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Arisha18-glitch/DDOS-DETECTION.git
