@@ -3,6 +3,8 @@
 A machine learning-based network intrusion detection system with an interactive Streamlit dashboard. This project analyzes network flows to classify traffic as benign or malicious across 8 different DDoS attack types.
 
 <img width="1450" height="682" alt="WhatsApp Image 2026-04-27 at 8 24 16 PM" src="https://github.com/user-attachments/assets/0076a468-617a-4df7-b730-d7535f29ef47" />
+<img width="1920" height="938" alt="image" src="https://github.com/user-attachments/assets/e96ba286-bad1-4a8c-acb1-98168078ee83" />
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/9c3ea4a8-739f-4ded-8e6f-53f36867c70a" />
 
 
 
